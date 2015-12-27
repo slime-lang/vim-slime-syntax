@@ -1,5 +1,5 @@
 " Vim indent file
-" Language:	Slim
+" Language:	Slime
 
 if exists("b:did_indent")
   finish
@@ -9,11 +9,11 @@ unlet! b:did_indent
 let b:did_indent = 1
 
 setlocal autoindent sw=2 et
-setlocal indentexpr=GetSlimIndent()
+setlocal indentexpr=GetSlimeIndent()
 setlocal indentkeys=o,O,*<Return>,},],0),!^F,=end,=else,=elsif,=rescue,=ensure,=when
 
 " Only define the function once.
-if exists("*GetSlimIndent")
+if exists("*GetSlimeIndent")
   finish
 endif
 
@@ -24,7 +24,7 @@ if !exists('g:haml_self_closing_tags')
   let g:haml_self_closing_tags = 'meta|link|img|hr|br'
 endif
 
-function! GetSlimIndent()
+function! GetSlimeIndent()
   let lnum = prevnonblank(v:lnum-1)
   if lnum == 0
     return 0

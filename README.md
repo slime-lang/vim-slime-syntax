@@ -1,7 +1,10 @@
-vim-slim
-===
+vim-slime
+=========
 
-slim syntax highlighting for vim.
+[Slime][slime] syntax highlighting for vim, based off [vim-slim][vim-slim].
+
+[slime]: https://github.com/slime-lang/slime
+[vim-slim]: https://github.com/slim-template/vim-slim
 
 Install with pathogen
 ---------------------
