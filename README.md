@@ -26,10 +26,10 @@ If you are already using pathogen, you can skip to step 3.
     filetype plugin indent on
     ```
 
-3. Install slim-vim
+3. Install slime-vim-syntax
 
         pushd ~/.vim/bundle; \
-        git clone git://github.com/slim-template/vim-slim.git; \
+        git clone git@github.com:slime-lang/vim-slime-syntax.git;\
         popd
 
 
@@ -44,14 +44,14 @@ Install with vbundle
         git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
         popd
 
-2. Configure your vimrc for Vundle. Here's a bare-minimum vimrc that enables vim-slim :
+2. Configure your vimrc for Vundle. Here's a bare-minimum vimrc that enables vim-slime-syntax :
 
 
     ```vim
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
 
-    Bundle 'slim-template/vim-slim.git'
+    Bundle 'slime-lang/vim-slime-syntax.git'
 
     syntax enable
     filetype plugin indent on
