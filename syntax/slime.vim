@@ -62,8 +62,8 @@ syn region slimeAttrString start=+\s*'+ skip=+\%(\\\\\)*\\"+ end=+'\s*+ containe
 syn region slimeInnerAttrString start=+\s*"+ skip=+\%(\\\\\)*\\"+ end=+"\s*+ contained contains=slimeInterpolation,slimeInterpolationEscape nextgroup=slimeAttr
 syn region slimeInnerAttrString start=+\s*'+ skip=+\%(\\\\\)*\\"+ end=+'\s*+ contained contains=slimeInterpolation,slimeInterpolationEscape nextgroup=slimeAttr
 
-syn region slimeInterpolation matchgroup=slimeInterpolationDelimiter start="#{" end="}" contains=@hamlElixirTop containedin=javascriptStringS,javascriptStringD,slimeWrappedAttrs
-syn region slimeInterpolation matchgroup=slimeInterpolationDelimiter start="#{{" end="}}" contains=@hamlElixirTop containedin=javascriptStringS,javascriptStringD,slimeWrappedAttrs
+syn region slimeInterpolation matchgroup=slimeInterpolationDelimiter start="#{" end="}" contains=@slimeElixirTop containedin=javascriptStringS,javascriptStringD,slimeWrappedAttrs
+syn region slimeInterpolation matchgroup=slimeInterpolationDelimiter start="#{{" end="}}" contains=@slimeElixirTop containedin=javascriptStringS,javascriptStringD,slimeWrappedAttrs
 syn match  slimeInterpolationEscape "\\\@<!\%(\\\\\)*\\\%(\\\ze#{\|#\ze{\)"
 
 syn region slimeElixir matchgroup=slimeElixirOutputChar start="\s*[=]\==[']\=" skip="\%\(,\s*\|\\\)$" end="$" contained contains=@slimeElixirTop keepend
