@@ -41,7 +41,8 @@ syn match slimeTag           "\w\+[><]*"         contained contains=htmlTagName 
 syn match slimeIdChar        "#{\@!"        contained nextgroup=slimeId
 syn match slimeId            "\%(\w\|-\)\+" contained nextgroup=@slimeComponent
 syn match slimeClassChar     "\."           contained nextgroup=slimeClass
-syn match slimeClass         "\%(\w\|-\)\+" contained nextgroup=@slimeComponent
+syn match slimeClass         "\%(\w\|[-/:]\)\+" contained nextgroup=@slimeComponent
+
 syn match slimeInlineTagChar "\s*:\s*"      contained nextgroup=slimeTag,slimeClassChar,slimeIdChar
 
 syn region slimeWrappedAttrs matchgroup=slimeWrappedAttrsDelimiter start="\s*{\s*" skip="}\s*\""  end="\s*}\s*"  contained contains=slimeAttr nextgroup=slimeElixir
